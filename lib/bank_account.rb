@@ -10,22 +10,19 @@ class BankAccount
 
   def deposit(amount)
     @balance += amount
+    #can deposit money into it's account
   end
 
   def display_balance
-   "Your balance is $#{@balance}."
+    "Your balance is $#{@balance}."
   end
 
   def valid?
-    if @status == "open" && @balance > 0
-      true
-    else
-      false
-    end
+    @status == "open" && @balance > 0
   end
 
   def close_account
-     @status = "closed"
+    @status = "closed"
   end
 
 end
